@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+</head>
+<body>
+  <div class="read">
+  <h2> Product list</h2>
+  <table border="2">
+    <th>Name</th>
+    <th>Status</th>
+    <th>Price</th>
+    <th>Brand</th>
+    <th>Care</th>
+    <th>Category</th>
+    <th>Colour</th>
+    <th>Material</th>
+    <th>Size</th>
+
+    <tr *ngFor="let i of productService.product">
+      <td>{{i.name}}</td>
+      <td>{{i.status}}</td>
+      <td>{{i.price}}</td>
+      <td>{{i.brand}}</td>
+      <td>{{i.care}}</td>
+      <td>{{i.category}}</td>
+      <td>{{i.colour}}</td>
+      <td>{{i.material}}</td>
+      <td>{{i.size}}</td>
+      </tr>
+  </table>
+
+</div>
+</body>
+</html>

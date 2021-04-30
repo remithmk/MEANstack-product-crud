@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+</head>
+<body>
+  <div class="create">
+  <h2>Enter Details of Products</h2>
+  <form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)">
+  <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="productService.selectedProduct._id"><br><br>
+ 
+  <div class="form-group">
+  <label class="form-group">Name:</label>
+  <input type="text" name="name" class="form-control short" placeholder="Name" #name="ngModel" [(ngModel)]="productService.selectedProduct.name" required><br><br>
+</div>
+
+   
+  <div>
+     <label>Status:</label>
+  <input type="text" name="status"class="form-control short"  placeholder="status" #status="ngModel" [(ngModel)]="productService.selectedProduct.status"><br><br> 
+    </div>
+
+    <div class="form-group">
+     <label>Price:</label>
+    <input type="text" name="price" class="form-control short" placeholder="price" #price="ngModel" [(ngModel)]="productService.selectedProduct.price"><br><br>
+   </div>
+
+    <div class="form-group">
+     <label>Brand:</label>
+  <input type="text" name="brand" class="form-control short" placeholder="brand" #brand="ngModel" [(ngModel)]="productService.selectedProduct.brand"><br><br>
+    </div>
+
+     <div class="form-group">
+     <label>Care:</label>
+  <input type="text" name="care" class="form-control short" placeholder="care" #care="ngModel" [(ngModel)]="productService.selectedProduct.care"><br><br>
+   </div>
+
+    <div class="form-group">
+     <label>Category:</label>
+  <input type="text" name="category" class="form-control short" placeholder="category" #category="ngModel" [(ngModel)]="productService.selectedProduct.category"><br><br>
+    </div>
+
+    <div class="form-group">
+     <label>Colour:</label>
+  <input type="text" name="colour" class="form-control short" placeholder="colour" #colour="ngModel" [(ngModel)]="productService.selectedProduct.colour"><br><br>
+   </div>
+
+    <div class="form-group">
+     <label>Material:</label>
+  <input type="text" name="material" class="form-control short" placeholder="material" #salary="ngModel" [(ngModel)]="productService.selectedProduct.material"><br><br>
+    </div>
+
+    <div class="form-group">
+     <label>Size:</label>
+  <input type="text" name="size" class="form-control short" placeholder="size" #size="ngModel" [(ngModel)]="productService.selectedProduct.size"><br><br>
+    </div>
+
+ 
+ 
+    
+ <button type="button" (click)="restForm(productForm)">Reset</button>
+  <button type="Submit" [disabled]="!productForm.valid">Submit</button>
+
+</form>
+</div>
+</body>
+</html>
